@@ -3,7 +3,7 @@ import React from 'react'
 const Multiplication = () => {
     return (
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-	 width="50px" height="50px" viewBox="0 0 92.132 92.132" style={{'enable-background': 'new 0 0 92.132 92.132'}} fill="#fff"
+	 width="50px" height="50px" viewBox="0 0 92.132 92.132" style={{'enableBackground': 'new 0 0 92.132 92.132'}} fill="#fff"
 	 >
 <g>
 	<g>

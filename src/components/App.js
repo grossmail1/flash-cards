@@ -5,6 +5,7 @@ import MultiplicationFlashCards from './MultiplicationFlashCards';
 const Container = styled.section`
   max-width: 980px;
   margin: 0 auto;
+  padding: 0 10px;
 `
 class App extends Component {
   render() {

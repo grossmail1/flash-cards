@@ -42,6 +42,7 @@ class MultiplicationFlashCards extends Component {
         top: null,
         bottom: null,
         result: null,
+        answerValue: '',
     }
 
     componentDidMount() {
@@ -58,11 +59,30 @@ class MultiplicationFlashCards extends Component {
             top,
             bottom,
             result,
+            answerValue: ''
         })
     }
 
     getRandomInt(max) {
         return Math.floor(Math.random() * Math.floor(max));
+    }
+
+    onFormSubmit = (e) => {
+        e.preventDefault();
+
+        const { answerValue, result} = this.state
+
+        if (answerValue == result) {
+            console.log('correct')
+        } else {
+            console.log('incorrect')
+        }
+
+        this.getNewNumbers()
+    }
+
+    onAnswerChange = (e) => {
+        this.setState({answerValue: e.target.value})
     }
     
     render() {
@@ -77,7 +97,9 @@ class MultiplicationFlashCards extends Component {
                     <Number>{this.state.bottom}</Number>
                 </Flex>
                 <EqualsLine />
-                <Input type="number"  autoFocus/>
+                <form onSubmit={this.onFormSubmit}>
+                    <Input type="number"  autoFocus onChange={this.onAnswerChange} value={this.state.answerValue}/>
+                </form>
              </FlashCard>
         )
     }
