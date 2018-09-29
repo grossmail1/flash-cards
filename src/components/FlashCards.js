@@ -37,7 +37,7 @@ const Input = styled.input`
     color: #fff;
 `
 
-class MultiplicationFlashCards extends Component {
+class FlashCards extends Component {
     state = {
         top: null,
         bottom: null,
@@ -70,12 +70,14 @@ class MultiplicationFlashCards extends Component {
     onFormSubmit = (e) => {
         e.preventDefault();
 
-        const { answerValue, result} = this.state
+        const { answerValue, result, top, bottom } = this.state
+        const {onCorrect, onIncorrect} = this.props
+        const answer = { top, bottom }
 
-        if (answerValue == result) {
-            console.log('correct')
+        if (parseInt(answerValue, 10) === result) {
+            onCorrect(answer)
         } else {
-            console.log('incorrect')
+            onIncorrect(answer)
         }
 
         this.getNewNumbers()
@@ -105,4 +107,4 @@ class MultiplicationFlashCards extends Component {
     }
 }
 
-export default MultiplicationFlashCards
+export default FlashCards
