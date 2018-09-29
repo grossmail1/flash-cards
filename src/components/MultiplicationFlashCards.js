@@ -18,14 +18,14 @@ const Number = styled.span`
 const EqualsLine = styled.div`
     width: 100%;
     margin: 5px 0;
-    height: 6px;
-    border-radius: 3px;
+    height: 4px;
+    border-radius: 2px;
     border: 1px solid #fff;
     background-color: #fff;
 `
 
 const Input = styled.input`
-    background-color: transparent
+    background-color: transparent;
     border-top: none;
     border-right: none;
     border-left: none;
@@ -35,7 +35,6 @@ const Input = styled.input`
     height: 6rem;
     text-align: right;
     color: #fff;
-
 `
 
 class MultiplicationFlashCards extends Component {
