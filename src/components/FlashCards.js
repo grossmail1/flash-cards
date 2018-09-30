@@ -64,7 +64,7 @@ class FlashCards extends Component {
     }
 
     getRandomInt(max) {
-        return Math.floor(Math.random() * Math.floor(max));
+        return Math.floor(Math.random() * Math.floor((max + 1)));
     }
 
     onFormSubmit = (e) => {
