@@ -72,9 +72,11 @@ class FlashCards extends Component {
 
         const { answerValue, result, top, bottom } = this.state
         const {onCorrect, onIncorrect} = this.props
-        const answer = { top, bottom }
+        const answerNumber = parseInt(answerValue, 10)
 
-        if (parseInt(answerValue, 10) === result) {
+        const answer = { top, bottom, result, answerNumber }
+
+        if (answerNumber === result) {
             onCorrect(answer)
         } else {
             onIncorrect(answer)
@@ -95,7 +97,7 @@ class FlashCards extends Component {
                     <Number>{this.state.top}</Number>
                 </Flex>
                 <Flex alignCenter justifyBetween>
-                    <Multiplication /> 
+                    <Multiplication width={50}/> 
                     <Number>{this.state.bottom}</Number>
                 </Flex>
                 <EqualsLine />
