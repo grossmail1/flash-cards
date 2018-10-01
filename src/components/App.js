@@ -6,14 +6,12 @@ import FlashCards from './FlashCards';
 import Timer from './Timer'
 import Start from './Start'
 import Results from './Results'
+import { H1 } from './common/Typography'
 
 const Container = styled.section`
   max-width: 980px;
   margin: 0 auto;
   padding: 0 10px;
-`
-const H1 = styled.h1`
-  font-size: 2.5rem;
 `
 
 class App extends Component {
