@@ -42,7 +42,7 @@ class App extends Component {
     const interval = 100
     this.timer = setInterval(() => {
       const { time } = this.state
-      time < 6000 ? this.setState({time: this.state.time + interval}) : this.onTimerFinish()
+      time < 60000 ? this.setState({time: this.state.time + interval}) : this.onTimerFinish()
     }, interval)
   }
 
